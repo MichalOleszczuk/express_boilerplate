@@ -18,7 +18,7 @@ Logstash integration:
 Metrics:
 * [Influx integration](./src/modules/directSendMetrics/direct-send-metrics.service.ts)
 * [Metrics collecting](./src/modules/metrics/metrics.service.ts)
-* [Auto discovery prometheus format metrics endpoint](./src/apps/core/middlewares/metrics.ts)
+* [Auto discovery prometheus format metrics endpoint](./src/apps/core/controllers/metrics.controller.ts)
 
 [Actuator endpoints](./src/apps/core/middlewares/actuator.ts)
 * To get info for /actuator/info endpoint [this](scripts/gitRepoInfo.ts) script is executed before build
@@ -26,7 +26,7 @@ Metrics:
 
 Swagger / OpenApi:
 * [OpenApi](./src/apps/core/middlewares/openApi.ts)
-* [Auto endpoint description](./src/apps/core/middlewares/metrics.ts)
+* [Auto endpoint description](./src/apps/core/controllers/metrics.controller.ts)
 
 Error handling:
 * On unexppected error return HTTP error

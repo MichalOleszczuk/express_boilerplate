@@ -50,7 +50,6 @@
     "pg": "^8.5.1",
     "prom-client": "^13.1.0",
     "response-time": "^2.3.2",
-    "soap": "^0.36.0",
     "swagger-jsdoc": "^6.0.6",
     "swagger-ui-express": "^4.1.6",
     "typeorm": "^0.2.31",
