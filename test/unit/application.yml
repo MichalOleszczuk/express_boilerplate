@@ -1,0 +1,32 @@
+server:
+  PORT: 8080
+
+# infuxClient:
+#   INFLUX_URL: http://localhost:8086
+#   INFLUX_DATABASE: defaultdb
+#   INFLUX_RETENTION_POLICY: autogen
+#   INFLUX_ORGANIZATION: default
+#   INFLUX_SEND_INTERVAL_MS: 10000
+
+# database:
+#   DB_PORT: 5432
+#   DB_USERNAME: nodetest
+#   DB_PASSWORD: nodetest
+#   DB_DATABASE: nodetest
+#   DB_ENTITIES: ./src/**/*.entity{.ts,.js}
+#   DB_MIGRATIONS: ./src/resources/db/migrations/*.ts
+
+# logstash:
+#   LOGSTASH_HOST: localhost
+#   LOGSTASH_PORT: 9600
+#   LOGSTASH_PROTOCOL: tcp
+
+# sqlite:
+#   DB_DATABASE: ./db.sqlite3
+#   DB_ENTITIES: ./src/**/*.entity{.ts,.js}
+#   DB_MIGRATIONS: ./src/resources/db/migrations/*{.ts,.js}
+
+externalSystem:
+  port: 3000
+  offer:
+    url: http://localhost:3000/offer

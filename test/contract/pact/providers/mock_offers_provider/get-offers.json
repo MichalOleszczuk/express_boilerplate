@@ -1,0 +1,24 @@
+{
+  "offers": [
+    {
+      "name": "Offer 1",
+      "netPrice": 12345
+    },
+    {
+      "name": "Offer 2",
+      "netPrice": 22345
+    },
+    {
+      "name": "Offer 3",
+      "netPrice": 31245
+    },
+    {
+      "name": "Offer 4",
+      "netPrice": 41235
+    },
+    {
+      "name": "Offer 5",
+      "netPrice": 51234
+    }
+  ]
+}

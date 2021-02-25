@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "outDir": "./build"
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

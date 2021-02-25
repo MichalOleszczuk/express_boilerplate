@@ -1,0 +1,70 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch BE",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+
+      "args": ["scripts/start.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "name": "Unit testing",
+      "request": "launch",
+      "args": ["--config", "./test/unit/jest.config.js", "--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "name": "E2E testing",
+      "request": "launch",
+      "args": ["--config", "./test/e2e/jest.config.js", "--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "outputCapture": "std"
+    },
+    {
+      "name": "Publish contracts",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+
+      "args": ["test/contract/pact/publish.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std",
+      "preLaunchTask": "npm: repoInfo"
+    },
+    {
+      "type": "node",
+      "name": "Contract testing",
+      "request": "launch",
+      "args": ["--config", "./test/contract/jest.config.js", "--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "outputCapture": "std"
+    }
+  ]
+}

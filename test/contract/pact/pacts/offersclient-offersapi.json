@@ -1,0 +1,50 @@
+{
+  "consumer": {
+    "name": "OffersClient"
+  },
+  "provider": {
+    "name": "OffersApi"
+  },
+  "interactions": [
+    {
+      "description": "a request for offers",
+      "providerState": "Request offers from sample service",
+      "request": {
+        "method": "GET",
+        "path": "/offer"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "offers": [
+            {
+              "name": "Offer 1",
+              "netPrice": 12345
+            }
+          ]
+        },
+        "matchingRules": {
+          "$.body.offers": {
+            "min": 1
+          },
+          "$.body.offers[*].*": {
+            "match": "type"
+          },
+          "$.body.offers[*].name": {
+            "match": "type"
+          },
+          "$.body.offers[*].netPrice": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
